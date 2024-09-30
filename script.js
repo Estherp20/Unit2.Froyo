@@ -8,13 +8,13 @@ let flavorArray = userInputString.split(",").map(flavor => flavor.trim());
 let flavorCount = {};
 
 flavorArray.forEach(flavor => {
-    FlavorCount[flavor] = (flavorCount[flavor] || 0) + 1;
+    flavorCount[flavor] = (flavorCount[flavor] || 0) + 1;
 });
 
 console.table(flavorCount);
 
 for (const key in flavorCount) {
     if (flavorCount.hasOwnProperty(key)){
-        console.log(`Flavor: ${Key}, Count: ${flavorCount[Key]}`);
+        console.log("Flavor: ", key, "Count: ", flavorCount[key]);
     }
 }
